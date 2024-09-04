@@ -1,0 +1,137 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #001866;
+  color: white;
+  padding: 10px 20px;
+}
+
+.menu {
+  position: relative;
+  display: inline-block;
+}
+
+.menu button {
+  background-color: transparent;
+  border: none;
+  border-radius: 4px;
+  padding: 12px 16px;
+  font-size: 18px;
+  color: white;
+  cursor: pointer;
+  outline: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+  display: flex;
+  align-items: center;
+}
+
+.menu button:hover, .menu button:focus {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.menu button::after {
+  content: "\25BE"; /* Unicode for downward caret */
+  font-size: 14px;
+  margin-left: 10px;
+  transition: transform 0.3s ease;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #001866;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+  border-radius: 4px;
+  top: 100%;
+  left: 0;
+  margin-top: 4px;
+  min-width: 180px; /* Match the width of the button */
+}
+
+.dropdown-content a {
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  border-bottom: 1px solid #003366;
+}
+
+.dropdown-content a:hover {
+  background-color: #003366;
+}
+
+.dropdown-content a:last-child {
+  border-bottom: none;
+}
+
+h1 {
+  margin: 0;
+}
+
+main {
+  padding: 20px;
+  text-align: center;
+}
+
+.content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+table {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto 20px auto;
+  border-collapse: collapse;
+  background-color: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+th, td {
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+  text-align: center; /* Center-align both headers and cells */
+}
+
+th {
+  background-color: #001866;
+  color: white;
+}
+
+.green-icon {
+  color: green;
+  font-weight: bold;
+}
+
+.red-icon {
+  color: red;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 600px) {
+  table {
+    width: 100%;
+    margin: 0;
+  }
+
+  th, td {
+    padding: 10px;
+    font-size: 12px;
+  }
+
+  th {
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pool Parlay</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="resources/favicon.ico" type="image/png">
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var button = document.querySelector('.menu button');
+            var dropdown = document.querySelector('.dropdown-content');
+
+            button.addEventListener('click', function () {
+                var isVisible = dropdown.style.display === 'block';
+                dropdown.style.display = isVisible ? 'none' : 'block';
+            });
+
+            document.addEventListener('click', function (event) {
+                if (!button.contains(event.target) && !dropdown.contains(event.target)) {
+                    dropdown.style.display = 'none';
+                }
+            });
+        });
+
+        function changeWeek(event) {
+            var week = event.target.getAttribute('data-week');
+            window.location.href = week + ".html";
+        }
+    </script>
+</head>
+<body>
+<header>
+    <a href="index.html" style="text-decoration: none; color: white;">
+        <h1>Pool Parlay</h1>
+    </a>
+    <div class="menu">
+        <button>Select Week</button>
+        <div class="dropdown-content">
+            <a href="#" data-week="week1" onclick="changeWeek(event)">Week 1</a>
+            <a href="#" data-week="week2" onclick="changeWeek(event)">Week 2</a>
+            <a href="#" data-week="week3" onclick="changeWeek(event)">Week 3</a>
+            <!-- Add more weeks as needed -->
+        </div>
+    </div>
+</header>
+<main>
+    <div class="content">
+        <h2>Select a Week to View Parlay Details</h2>
+        <p>Use the dropdown menu above to navigate to the details for each week's NFL parlay.</p>
+    </div>
+</main>
+</body>
+</html>

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 1 NFL Parlay</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="resources/favicon.ico" type="image/png">
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var button = document.querySelector('.menu button');
+            var dropdown = document.querySelector('.dropdown-content');
+
+            button.addEventListener('click', function () {
+                var isVisible = dropdown.style.display === 'block';
+                dropdown.style.display = isVisible ? 'none' : 'block';
+            });
+
+            document.addEventListener('click', function (event) {
+                if (!button.contains(event.target) && !dropdown.contains(event.target)) {
+                    dropdown.style.display = 'none';
+                }
+            });
+
+            // Count green and red icons and calculate the Parlay Count
+            var greenIcons = document.querySelectorAll('.green-icon').length;
+            var redIcons = document.querySelectorAll('.red-icon').length;
+            var totalPossible = greenIcons + redIcons;
+
+            // Set the Parlay Count in the table
+            document.getElementById('parlay-count').textContent = `${greenIcons} / ${totalPossible}`;
+        });
+
+        function changeWeek(event) {
+            var week = event.target.getAttribute('data-week');
+            window.location.href = week + ".html";
+        }
+    </script>
+</head>
+<body>
+<header>
+    <a href="index.html" style="text-decoration: none; color: white;">
+        <h1>Pool Parlay</h1>
+    </a>
+    <div class="menu">
+        <button>Select Week</button>
+        <div class="dropdown-content">
+            <a href="#" data-week="week1" onclick="changeWeek(event)">Week 1</a>
+            <a href="#" data-week="week2" onclick="changeWeek(event)">Week 2</a>
+            <a href="#" data-week="week3" onclick="changeWeek(event)">Week 3</a>
+            <!-- Add more weeks as needed -->
+        </div>
+    </div>
+</header>
+<main>
+    <h2>Week 1 NFL Parlay</h2>
+    <table>
+        <thead>
+        <tr>
+            <th>Game</th>
+            <th>Game Time (CDT)</th>
+            <th>Parlayed</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>Ravens vs Chiefs</td>
+            <td>Thursday, Sept. 5th, 8:20 PM</td>
+            <td><span class="green-icon">&#x2714;</span></td>
+        </tr>
+        <tr>
+            <td>Packers vs Eagles</td>
+            <td>Sunday, Sept. 8th, 12:00 PM</td>
+            <td><span class="green-icon">&#x2714;</span></td>
+        </tr>
+        <tr>
+            <td>Steelers vs Falcons</td>
+            <td>Sunday, Sept. 8th, 12:00 PM</td>
+            <td><span class="green-icon">&#x2714;</span></td>
+        </tr>
+        <tr>
+            <td>Cardinals vs Bills</td>
+            <td>Sunday, Sept. 8th, 12:00 PM</td>
+            <td><span class="green-icon">&#x2714;</span></td>
+        </tr>
+        <tr>
+            <td>Titans vs Bears</td>
+            <td>Sunday, Sept. 8th, 12:00 PM</td>
+            <td><span class="green-icon">&#x2714;</span></td>
+        </tr>
+        <tr>
+            <td>Patriots vs Bengals</td>
+            <td>Sunday, Sept. 8th, 12:00 PM</td>
+            <td><span class="green-icon">&#x2714;</span></td>
+        </tr>
+        <tr>
+            <td>Texans vs Colts</td>
+            <td>Sunday, Sept. 8th, 12:00 PM</td>
+            <td><span class="green-icon">&#x2714;</span></td>
+        </tr>
+        <tr>
+            <td>Jaguars vs Dolphins</td>
+            <td>Sunday, Sept. 8th, 12:00 PM</td>
+            <td><span class="green-icon">&#x2714;</span></td>
+        </tr>
+        <tr>
+            <td>Vikings vs Giants</td>
+            <td>Sunday, Sept. 8th, 12:00 PM</td>
+            <td><span class="green-icon">&#x2714;</span></td>
+        </tr>
+        <tr>
+            <td>Raiders vs Chargers</td>
+            <td>Sunday, Sept. 8th, 3:05 PM</td>
+            <td><span class="red-icon">&#x2718;</span></td>
+        </tr>
+        <tr>
+            <td>Broncos vs Seahawks</td>
+            <td>Sunday, Sept. 8th, 3:25 PM</td>
+            <td><span class="green-icon">&#x2714;</span></td>
+        </tr>
+        <tr>
+            <td>Cowboys vs Browns</td>
+            <td>Sunday, Sept. 8th, 3:25 PM</td>
+            <td><span class="green-icon">&#x2714;</span></td>
+        </tr>
+        <tr>
+            <td>Rams vs Lions</td>
+            <td>Sunday, Sept. 8th, 7:20 PM</td>
+            <td><span class="green-icon">&#x2714;</span></td>
+        </tr>
+        <tr>
+            <td>Jets vs 49ers</td>
+            <td>Sunday, Sept. 8th, 7:20 PM</td>
+            <td><span class="green-icon">&#x2714;</span></td>
+        </tr>
+        <tr>
+            <td>Commanders vs Buccaneers</td>
+            <td>Sunday, Sept. 8th, 7:20 PM</td>
+            <td><span class="green-icon">&#x2714;</span></td>
+        </tr>
+        <tr>
+            <td>Saints vs Panthers</td>
+            <td>Monday, Sept. 9th, 8:15 PM</td>
+            <td><span class="green-icon">&#x2714;</span></td>
+            <td></td>
+        </tr>
+        </tbody>
+    </table>
+    <h2>Parlay Summary</h2>
+    <table>
+        <thead>
+        <tr>
+            <th>Parlay Count</th>
+            <th>Amount Wagered</th>
+            <th>Outcome</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td id="parlay-count"></td>
+            <td></td>
+            <td id="outcome">?</td>
+        </tr>
+        </tbody>
+    </table>
+</main>
+</body>
+</html>
