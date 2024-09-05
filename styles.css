@@ -14,7 +14,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #33ceff;
+    background-color: #4285F4;
     color: white;
     padding: 10px 20px;
     margin-bottom: 20px;
@@ -54,7 +54,7 @@ header {
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #33ceff;
+    background-color: #4285F4;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     z-index: 1;
     border-radius: 4px;
@@ -69,11 +69,11 @@ header {
     padding: 12px 16px;
     text-decoration: none;
     display: block;
-    border-bottom: 1px solid #1f88aa;
+    border-bottom: 1px solid #76A7FA;
 }
 
 .dropdown-content a:hover {
-    background-color: #1f88aa;
+    background-color: #76A7FA;
 }
 
 .dropdown-content a:last-child {
@@ -135,7 +135,7 @@ th, td {
 }
 
 th {
-    background-color: #33ceff;
+    background-color: #4285F4;
     color: white;
 }
 
@@ -181,7 +181,7 @@ tbody tr:nth-child(odd) {
 }
 
 footer {
-    background-color: #33ceff;
+    background-color: #4285F4;
     color: white;
     padding: 10px 0;
     text-align: center;
