@@ -34,7 +34,7 @@ header {
     color: white;
     cursor: pointer;
     outline: none;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4); /* Increased blur and opacity */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
     transition: background-color 0.3s ease;
     display: flex;
     align-items: center;
@@ -61,7 +61,7 @@ header {
     top: 100%;
     left: 0;
     margin-top: 4px;
-    min-width: 180px; /* Match the width of the button */
+    min-width: 180px;
 }
 
 .dropdown-content a {
@@ -131,8 +131,7 @@ table {
 
 th, td {
     padding: 12px;
-    border-bottom: 1px solid #ddd;
-    text-align: center; /* Center-align both headers and cells */
+    text-align: center;
 }
 
 th {
@@ -140,14 +139,21 @@ th {
     color: white;
 }
 
-.green-icon {
-    color: green;
-    font-weight: bold;
+td {
+    border-right: 1px solid #d3d3d3; /* Light gray border for columns */
 }
 
-.red-icon {
-    color: red;
-    font-weight: bold;
+td:last-child {
+    border-right: none; /* Remove right border from the last column */
+}
+
+/* Alternating row colors */
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9; /* Very light gray */
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #ffffff; /* White */
 }
 
 @media screen and (max-width: 600px) {
@@ -166,12 +172,20 @@ th {
     }
 }
 
+.success-icon {
+    color: #4caf50;
+}
+
+.fail-icon {
+    color: #f44336;
+}
+
 footer {
     background-color: #33ceff;
     color: white;
     padding: 10px 0;
     text-align: center;
-    font-size: 12px; /* Smaller text size */
+    font-size: 12px;
 }
 
 .footer-content {
@@ -181,5 +195,5 @@ footer {
 .footer-content a {
     color: white;
     text-decoration: none;
-    margin-left: 5px; /* Smaller margin */
+    margin-left: 5px;
 }

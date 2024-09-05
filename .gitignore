@@ -6,3 +6,6 @@ dist
 .cache
 .idea
 *.csv
+*.json
+!package.json
+!package-lock.json

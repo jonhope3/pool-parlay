@@ -1,8 +1,7 @@
 {
   "private": true,
   "dependencies": {
-    "csv-parser": "^3.0.0",
-    "json2csv": "^6.0.0-alpha.2"
+    "csv-parser": "^3.0.0"
   },
   "engines": {
     "node": ">=18"

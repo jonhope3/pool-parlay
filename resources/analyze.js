@@ -1,11 +1,10 @@
 const fs = require('fs');
 const csv = require('csv-parser');
-const { parse } = require('json2csv');
 
 // Get the input file name from command-line arguments
 const inputFile = process.argv[2];
-const outputFile = 'output.csv';  // File indicating if all users agree
-const summaryFile = 'summary.csv';  // File showing detailed picks
+const outputFile = 'output.json';  // File indicating if all users agree
+const summaryFile = 'summary.json';  // File showing detailed picks
 
 if (!inputFile) {
     console.error('Please provide the input CSV file as a command line argument.');
@@ -43,11 +42,28 @@ fs.createReadStream(inputFile)
 
         games.forEach(game => {
             const teams = results[game] || [];
+            const teamCounts = {};
+            let allAgreeTeam = '';
+
+            // Count occurrences of each team
+            teams.forEach(team => {
+                teamCounts[team] = (teamCounts[team] || 0) + 1;
+            });
+
+            // Find the team that all users agree on
+            for (const [team, count] of Object.entries(teamCounts)) {
+                if (count === users.size) {
+                    allAgreeTeam = team;
+                    break;
+                }
+            }
+
             const uniqueTeams = new Set(teams);
-            const allAgree = [...uniqueTeams].some(team => teams.filter(t => t === team).length === 4);
+            const allAgree = allAgreeTeam !== '';
             output.push({
                 Game: game,
-                AllUsersAgree: allAgree ? 'True' : 'False'
+                AllUsersAgree: allAgree ? 'True' : 'False',
+                AgreedTeam: allAgreeTeam || 'None'
             });
 
             if (!allAgree) {
@@ -61,7 +77,7 @@ fs.createReadStream(inputFile)
             }
         });
 
-        fs.writeFileSync(outputFile, parse(output));
-        fs.writeFileSync(summaryFile, parse(summary));
-        console.log('CSV files have been written to', outputFile, 'and', summaryFile);
+        fs.writeFileSync(outputFile, JSON.stringify(output, null, 2));
+        fs.writeFileSync(summaryFile, JSON.stringify(summary, null, 2));
+        console.log('JSON files have been written to', outputFile, 'and', summaryFile);
     });

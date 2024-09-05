@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Week 1 | Pool Parlay</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="icon" href="resources/favicon.ico" type="image/png">
+    <title>Pool Parlay | Week 1</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="icon" href="./resources/assets/favicon.ico" type="image/png">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             var button = document.querySelector('.menu button');
@@ -22,13 +23,25 @@
                 }
             });
 
-            // Count green and red icons and calculate the Parlay Count
-            var greenIcons = document.querySelectorAll('.green-icon').length;
-            var redIcons = document.querySelectorAll('.red-icon').length;
-            var totalPossible = greenIcons + redIcons;
+            // Function to update the Parlay Count
+            function updateParlayCount() {
+                var table = document.querySelector('main table');
+                var consensusCells = table.querySelectorAll('tbody tr td:nth-child(3)');
+                var nonEmptyCount = 0;
+                var totalGames = consensusCells.length;
 
-            // Set the Parlay Count in the table
-            document.getElementById('parlay-count').textContent = `${greenIcons} / ${totalPossible}`;
+                consensusCells.forEach(function(cell) {
+                    if (cell.textContent.trim() !== '') {
+                        nonEmptyCount++;
+                    }
+                });
+
+                var parlayCountCell = document.getElementById('parlay-count');
+                parlayCountCell.textContent = `${nonEmptyCount} / ${totalGames}`;
+            }
+
+            // Call the function to update the Parlay Count
+            updateParlayCount();
         });
 
         function changeWeek(event) {
@@ -39,7 +52,7 @@
 </head>
 <body>
 <header>
-    <a href="index.html" style="text-decoration: none; color: white;">
+    <a href="./index.html" style="text-decoration: none; color: white;">
         <h1>Pool Parlay</h1>
     </a>
     <div class="menu">
@@ -60,89 +73,106 @@
         <tr>
             <th>Game</th>
             <th>Game Time (CDT)</th>
-            <th>Parlayed</th>
+            <th>Consensus</th>
+            <th>Outcome</th>
         </tr>
         </thead>
         <tbody>
         <tr>
             <td>Ravens vs Chiefs</td>
             <td>Thursday, Sept. 5th, 8:20 PM</td>
-            <td><span class="green-icon">&#x2714;</span></td>
+            <td>Chiefs</td>
+            <td><span class="material-icons"></span></td>
         </tr>
         <tr>
             <td>Packers vs Eagles</td>
             <td>Sunday, Sept. 8th, 12:00 PM</td>
-            <td><span class="red-icon">&#x2718;</span></td>
+            <td></td>
+            <td></td>
         </tr>
         <tr>
             <td>Steelers vs Falcons</td>
             <td>Sunday, Sept. 8th, 12:00 PM</td>
-            <td><span class="red-icon">&#x2718;</span></td>
+            <td></td>
+            <td></td>
         </tr>
         <tr>
             <td>Cardinals vs Bills</td>
             <td>Sunday, Sept. 8th, 12:00 PM</td>
-            <td><span class="green-icon">&#x2714;</span></td>
+            <td>Bills</td>
+            <td></td>
         </tr>
         <tr>
             <td>Titans vs Bears</td>
             <td>Sunday, Sept. 8th, 12:00 PM</td>
-            <td><span class="green-icon">&#x2714;</span></td>
+            <td>Bears</td>
+            <td></td>
         </tr>
         <tr>
             <td>Patriots vs Bengals</td>
             <td>Sunday, Sept. 8th, 12:00 PM</td>
-            <td><span class="green-icon">&#x2714;</span></td>
+            <td>Bengals</td>
+            <td></td>
         </tr>
         <tr>
             <td>Texans vs Colts</td>
             <td>Sunday, Sept. 8th, 12:00 PM</td>
-            <td><span class="green-icon">&#x2714;</span></td>
+            <td>Texans</td>
+            <td></td>
         </tr>
         <tr>
             <td>Jaguars vs Dolphins</td>
             <td>Sunday, Sept. 8th, 12:00 PM</td>
-            <td><span class="red-icon">&#x2718;</span></td>
+            <td></td>
+            <td></td>
         </tr>
         <tr>
             <td>Vikings vs Giants</td>
             <td>Sunday, Sept. 8th, 12:00 PM</td>
-            <td><span class="green-icon">&#x2714;</span></td>
+            <td>Vikings</td>
+            <td></td>
         </tr>
         <tr>
             <td>Raiders vs Chargers</td>
             <td>Sunday, Sept. 8th, 3:05 PM</td>
-            <td><span class="red-icon">&#x2718;</span></td>
+            <td></td>
+            <td></td>
         </tr>
         <tr>
             <td>Broncos vs Seahawks</td>
             <td>Sunday, Sept. 8th, 3:25 PM</td>
-            <td><span class="green-icon">&#x2714;</span></td>
+            <td>Seahawks</td>
+            <td></td>
         </tr>
         <tr>
             <td>Cowboys vs Browns</td>
             <td>Sunday, Sept. 8th, 3:25 PM</td>
-            <td><span class="green-icon">&#x2714;</span></td>
+            <td>Cowboys</td>
+            <td></td>
         </tr>
         <tr>
             <td>Rams vs Lions</td>
             <td>Sunday, Sept. 8th, 7:20 PM</td>
-            <td><span class="green-icon">&#x2714;</span></td>
+            <td>Lions</td>
+            <td></td>
         </tr>
         <tr>
             <td>Jets vs 49ers</td>
             <td>Sunday, Sept. 8th, 7:20 PM</td>
-            <td><span class="green-icon">&#x2714;</span></td>
+            <td>49ers</td>
+            <td></td>
         </tr>
         <tr>
             <td>Commanders vs Buccaneers</td>
             <td>Sunday, Sept. 8th, 7:20 PM</td>
-            <td><span class="green-icon">&#x2714;</span></td>
+            <td>Buccaneers</td>
+            <td></td>
         </tr>
         <tr>
             <td>Saints vs Panthers</td>
             <td>Monday, Sept. 9th, 8:15 PM</td>
-            <td><span class="green-icon">&#x2714;</span></td>
+            <td>Saints</td>
+            <td></td>
         </tr>
         </tbody>
     </table>
@@ -150,17 +180,17 @@
     <table>
         <thead>
         <tr>
-            <th>Parlay Count</th>
-            <th>Amount Wagered</th>
-            <th>Outcome</th>
+            <th>Parlay</th>
+            <th>Wager</th>
+            <th>Odds</th>
             <th>Winnings</th>
         </tr>
         </thead>
         <tbody>
         <tr>
             <td id="parlay-count"></td>
-            <td>$0.00</td>
-            <td id="outcome">?</td>
+            <td id="wager">$20.00</td>
+            <td id="odds">+18414</td>
             <td id="winnings">$0.00</td>
         </tr>
         </tbody>
