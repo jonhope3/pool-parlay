@@ -1,42 +1,58 @@
 import fs from 'fs';
 import fetch from 'node-fetch';
-import { format } from 'date-fns';
+import { format, addDays } from 'date-fns';
 
-function getFormattedDate(date = new Date()) {
+// Define the date range for Week 1 (starting Thursday, Sept. 5, 2024)
+const startDate = new Date(2024, 8, 5); // September 5, 2024
+const endDate = new Date(2024, 8, 9);   // September 9, 2024
+
+function getFormattedDate(date) {
     return format(date, 'yyyyMMdd');
 }
 
-async function fetchScores(date) {
-    try {
-        const formattedDate = date || getFormattedDate();
-        const endpoint = `https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=${formattedDate}`;
-        const response = await fetch(endpoint);
-        const data = await response.json();
-        const games = data.events;
+async function fetchScoresForDate(date) {
+    const formattedDate = getFormattedDate(date);
+    const endpoint = `https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=${formattedDate}`;
+    const response = await fetch(endpoint);
+    const data = await response.json();
+    return data.events;
+}
 
-        if (!games || games.length === 0) {
-            console.log('No games found for the given date.');
+async function fetchScoresForWeek() {
+    try {
+        let currentDate = startDate;
+        let allCompletedGames = [];
+
+        // Loop through each day in the date range
+        while (currentDate <= endDate) {
+            const games = await fetchScoresForDate(currentDate);
+            const completedGames = games.filter(game => game.status.type.name === 'STATUS_FINAL');
+
+            const dailyResults = completedGames.map(game => {
+                const homeTeam = game.competitions[0].competitors[0].team.displayName;
+                const awayTeam = game.competitions[0].competitors[1].team.displayName;
+                const homeScore = game.competitions[0].competitors[0].score;
+                const awayScore = game.competitions[0].competitors[1].score;
+
+                return {
+                    homeTeam,
+                    awayTeam,
+                    homeScore,
+                    awayScore,
+                    status: 'Completed'
+                };
+            });
+
+            allCompletedGames = allCompletedGames.concat(dailyResults);
+            currentDate = addDays(currentDate, 1);  // Move to the next day
+        }
+
+        if (allCompletedGames.length === 0) {
+            console.log('No games found for the given week.');
             return;
         }
 
-        const completedGames = games.filter(game => game.status.type.name === 'STATUS_FINAL');
-
-        const result = completedGames.map(game => {
-            const homeTeam = game.competitions[0].competitors[0].team.displayName;
-            const awayTeam = game.competitions[0].competitors[1].team.displayName;
-            const homeScore = game.competitions[0].competitors[0].score;
-            const awayScore = game.competitions[0].competitors[1].score;
-
-            return {
-                homeTeam,
-                awayTeam,
-                homeScore,
-                awayScore,
-                status: 'Completed'
-            };
-        });
-
-        let output = JSON.stringify(result, null, 2);
+        let output = JSON.stringify(allCompletedGames, null, 2);
         console.log(output);
         fs.writeFileSync('completedGames.json', output);
         console.log('Completed games data has been written to completedGames.json');
@@ -46,7 +62,4 @@ async function fetchScores(date) {
     }
 }
 
-const args = process.argv.slice(2);
-const date = args[0] ? args[0] : null;
-
-fetchScores(date);
+fetchScoresForWeek();
