@@ -139,6 +139,10 @@ th {
     color: white;
 }
 
+tr {
+    height: 56px;
+}
+
 td {
     border-right: 1px solid #d3d3d3; /* Light gray border for columns */
 }
