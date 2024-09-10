@@ -3,6 +3,7 @@ import fetch from 'node-fetch';
 import { format, addDays } from 'date-fns';
 
 // Define the date range for Week 1 (starting Thursday, Sept. 5, 2024)
+// `monthIndex` is zero-based
 const startDate = new Date(2024, 8, 5); // September 5, 2024
 const endDate = new Date(2024, 8, 9);   // September 9, 2024
 

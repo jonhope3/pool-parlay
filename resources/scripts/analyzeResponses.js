@@ -1,5 +1,5 @@
-const fs = require('fs');
-const csv = require('csv-parser');
+import fs from 'fs';
+import csv from 'csv-parser'
 
 // Get the input file name from command-line arguments
 const inputFile = process.argv[2];
