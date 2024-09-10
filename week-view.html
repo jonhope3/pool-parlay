@@ -109,9 +109,9 @@
 
         // Function to load data for a specific week
         function loadWeekData(week) {
-            const url = './resources/season_data.json'; // URL to the JSON file containing season data
+            const dataLocation = './resources/season_data.json'; // URL to the JSON file containing season data
 
-            fetch(url) // Fetch the JSON data from the server
+            fetch(dataLocation) // Fetch the JSON data from the server
                 .then(response => response.json()) // Parse the response as JSON
                 .then(data => {
                     // Find data for the specified week

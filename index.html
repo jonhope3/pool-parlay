@@ -21,7 +21,30 @@
                     dropdown.style.display = 'none';
                 }
             });
+
+            // Fetch JSON and populate dropdown
+            const dataLocation = './resources/season_data.json';
+            fetch(dataLocation)
+                .then(response => response.json())
+                .then(data => {
+                    populateDropdown(data);
+                })
+                .catch(error => console.error('Error fetching JSON:', error));
         });
+
+        function populateDropdown(data) {
+            let dropdown = document.querySelector('.dropdown-content');
+            dropdown.innerHTML = ''; // Clear existing content
+
+            data.weeks.filter(week => week.week > 0).forEach(week => {
+                var link = document.createElement('a');
+                link.href = '#';
+                link.setAttribute('data-week', week.week);
+                link.textContent = `Week ${week.week}`;
+                link.addEventListener('click', changeWeek);
+                dropdown.appendChild(link);
+            });
+        }
 
         function changeWeek(event) {
             event.preventDefault(); // Prevent default anchor behavior
@@ -30,7 +53,7 @@
                 // Redirect to index.html
                 window.location.href = 'index.html';
             } else {
-                // Redirect to week-overview.html with week as a query parameter
+                // Redirect to week-view.html with week as a query parameter
                 window.location.href = `week-view.html?week=${week}`;
             }
         }
@@ -44,9 +67,7 @@
     <div class="menu">
         <button>Select Week</button>
         <div class="dropdown-content">
-            <a href="#" data-week="index" onclick="changeWeek(event)">Home</a>
-            <a href="#" data-week="week1" onclick="changeWeek(event)">Week 1</a>
-            <a href="#" data-week="week2" onclick="changeWeek(event)">Week 2</a>
+            <!-- Dropdown items will be dynamically inserted here -->
         </div>
     </div>
 </header>
@@ -69,24 +90,28 @@
                 a wager together</strong> with the
                 benefit of everyone's agreement that <i>these things are going to happen</i>. Your group will
                 place a wager consisting of
-                everyone's buy-ins, and watch how your predictions turn out. Afterward, we'll show you your group's wager, and
+                everyone's buy-ins, and watch how your predictions turn out. Afterward, we'll show you your group's
+                wager, and
                 the outcome!
             </p>
             <p>We hope you enjoy your Pool Parlay... dive right in!</p>
 
             <hr>
             <h4>Step 1. <strong>Discuss and Decide</strong></h4>
-            <p>Gather with your friends and use anonymous polls to agree on predictions about sports or other events.</p>
+            <p>Gather with your friends and use anonymous polls to agree on predictions about sports or other
+                events.</p>
 
             <h4>Step 2. <strong>Place a Collective Bet</strong></h4>
-            <p>Once your group agrees on what will or will not happen, place a combined wager based on everyone input.</p>
+            <p>Once your group agrees on what will or will not happen, place a combined wager based on everyone
+                input.</p>
 
             <h4>Step 3. <strong>Watch and Review</strong></h4>
             <p>Monitor the outcome of your bet and see how your predictions turn out.</p>
             <hr>
 
             <p>Stay tuned, more to come!</p>
-            <p style="font-size: 0.9em; display: inline;">...including how the mathematics of group parlays can work in your favor 🤓</p>
+            <p style="font-size: 0.9em; display: inline;">...including how the mathematics of group parlays can work in
+                your favor 🤓</p>
         </section>
     </section>
 </main>
