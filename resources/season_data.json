@@ -1,0 +1,244 @@
+{
+  "season": "2024",
+  "weeks": [
+    {
+      "week": 0,
+      "games": [
+      ]
+    },
+    {
+      "week": 1,
+      "games": [
+        {
+          "team1": "Baltimore Ravens",
+          "team2": "Kansas City Chiefs",
+          "gameTime": "Thursday, Sep 5, 2024 @ 7:20 PM",
+          "consensus": "Chiefs",
+          "outcome": "W"
+        },
+        {
+          "team1": "Green Bay Packers",
+          "team2": "Philadelphia Eagles",
+          "gameTime": "Friday, Sep 6, 2024 @ 7:15 PM",
+          "consensus": "",
+          "outcome": ""
+        },
+        {
+          "team1": "Jacksonville Jaguars",
+          "team2": "Miami Dolphins",
+          "gameTime": "Sunday, Sep 8, 2024 @ 12:00 PM",
+          "consensus": "",
+          "outcome": ""
+        },
+        {
+          "team1": "Arizona Cardinals",
+          "team2": "Buffalo Bills",
+          "gameTime": "Sunday, Sep 8, 2024 @ 12:00 PM",
+          "consensus": "Bills",
+          "outcome": "W"
+        },
+        {
+          "team1": "Pittsburgh Steelers",
+          "team2": "Atlanta Falcons",
+          "gameTime": "Sunday, Sep 8, 2024 @ 12:00 PM",
+          "consensus": "",
+          "outcome": ""
+        },
+        {
+          "team1": "Minnesota Vikings",
+          "team2": "New York Giants",
+          "gameTime": "Sunday, Sep 8, 2024 @ 12:00 PM",
+          "consensus": "Vikings",
+          "outcome": "W"
+        },
+        {
+          "team1": "Tennessee Titans",
+          "team2": "Chicago Bears",
+          "gameTime": "Sunday, Sep 8, 2024 @ 12:00 PM",
+          "consensus": "Bears",
+          "outcome": "W"
+        },
+        {
+          "team1": "New England Patriots",
+          "team2": "Cincinnati Bengals",
+          "gameTime": "Sunday, Sep 8, 2024 @ 12:00 PM",
+          "consensus": "Bengals",
+          "outcome": "L"
+        },
+        {
+          "team1": "Carolina Panthers",
+          "team2": "New Orleans Saints",
+          "gameTime": "Sunday, Sep 8, 2024 @ 12:00 PM",
+          "consensus": "Saints",
+          "outcome": "W"
+        },
+        {
+          "team1": "Houston Texans",
+          "team2": "Indianapolis Colts",
+          "gameTime": "Sunday, Sep 8, 2024 @ 12:00 PM",
+          "consensus": "Texans",
+          "outcome": "W"
+        },
+        {
+          "team1": "Denver Broncos",
+          "team2": "Seattle Seahawks",
+          "gameTime": "Sunday, Sep 8, 2024 @ 3:05 PM",
+          "consensus": "Seahawks",
+          "outcome": "W"
+        },
+        {
+          "team1": "Las Vegas Raiders",
+          "team2": "Los Angeles Chargers",
+          "gameTime": "Sunday, Sep 8, 2024 @ 3:05 PM",
+          "consensus": "",
+          "outcome": ""
+        },
+        {
+          "team1": "Washington Commanders",
+          "team2": "Tampa Bay Buccaneers",
+          "gameTime": "Sunday, Sep 8, 2024 @ 3:25 PM",
+          "consensus": "Buccaneers",
+          "outcome": "W"
+        },
+        {
+          "team1": "Dallas Cowboys",
+          "team2": "Cleveland Browns",
+          "gameTime": "Sunday, Sep 8, 2024 @ 3:25 PM",
+          "consensus": "Cowboys",
+          "outcome": "W"
+        },
+        {
+          "team1": "Los Angeles Rams",
+          "team2": "Detroit Lions",
+          "gameTime": "Sunday, Sep 8, 2024 @ 7:20 PM",
+          "consensus": "Lions",
+          "outcome": "W"
+        },
+        {
+          "team1": "San Francisco 49ers",
+          "team2": "Arizona Cardinals",
+          "gameTime": "Monday, Sep 9, 2024 @ 7:15 PM",
+          "consensus": "49ers",
+          "outcome": "W"
+        }
+      ]
+    },
+    {
+      "week": 2,
+      "games": [
+        {
+          "team1": "Buffalo Bills",
+          "team2": "Miami Dolphins",
+          "gameTime": "Thursday, Sep 12, 2024 @ 7:15 PM",
+          "consensus": "",
+          "outcome": ""
+        },
+        {
+          "team1": "New Orleans Saints",
+          "team2": "Dallas Cowboys",
+          "gameTime": "Sunday, Sep 15, 2024 @ 12:00 PM",
+          "consensus": "",
+          "outcome": ""
+        },
+        {
+          "team1": "Tampa Bay Buccaneers",
+          "team2": "Detroit Lions",
+          "gameTime": "Sunday, Sep 15, 2024 @ 12:00 PM",
+          "consensus": "",
+          "outcome": ""
+        },
+        {
+          "team1": "Indianapolis Colts",
+          "team2": "Green Bay Packers",
+          "gameTime": "Sunday, Sep 15, 2024 @ 12:00 PM",
+          "consensus": "",
+          "outcome": ""
+        },
+        {
+          "team1": "New York Jets",
+          "team2": "Tennessee Titans",
+          "gameTime": "Sunday, Sep 15, 2024 @ 12:00 PM",
+          "consensus": "",
+          "outcome": ""
+        },
+        {
+          "team1": "San Francisco 49ers",
+          "team2": "Minnesota Vikings",
+          "gameTime": "Sunday, Sep 15, 2024 @ 12:00 PM",
+          "consensus": "",
+          "outcome": ""
+        },
+        {
+          "team1": "Seattle Seahawks",
+          "team2": "New England Patriots",
+          "gameTime": "Sunday, Sep 15, 2024 @ 12:00 PM",
+          "consensus": "",
+          "outcome": ""
+        },
+        {
+          "team1": "New York Giants",
+          "team2": "Washington Commanders",
+          "gameTime": "Sunday, Sep 15, 2024 @ 12:00 PM",
+          "consensus": "",
+          "outcome": ""
+        },
+        {
+          "team1": "Los Angeles Chargers",
+          "team2": "Carolina Panthers",
+          "gameTime": "Sunday, Sep 15, 2024 @ 12:00 PM",
+          "consensus": "",
+          "outcome": ""
+        },
+        {
+          "team1": "Cleveland Browns",
+          "team2": "Jacksonville Jaguars",
+          "gameTime": "Sunday, Sep 15, 2024 @ 12:00 PM",
+          "consensus": "",
+          "outcome": ""
+        },
+        {
+          "team1": "Las Vegas Raiders",
+          "team2": "Baltimore Ravens",
+          "gameTime": "Sunday, Sep 15, 2024 @ 12:00 PM",
+          "consensus": "",
+          "outcome": ""
+        },
+        {
+          "team1": "Los Angeles Rams",
+          "team2": "Arizona Cardinals",
+          "gameTime": "Sunday, Sep 15, 2024 @ 3:05 PM",
+          "consensus": "",
+          "outcome": ""
+        },
+        {
+          "team1": "Pittsburgh Steelers",
+          "team2": "Denver Broncos",
+          "gameTime": "Sunday, Sep 15, 2024 @ 3:25 PM",
+          "consensus": "",
+          "outcome": ""
+        },
+        {
+          "team1": "Cincinnati Bengals",
+          "team2": "Kansas City Chiefs",
+          "gameTime": "Sunday, Sep 15, 2024 @ 3:25 PM",
+          "consensus": "",
+          "outcome": ""
+        },
+        {
+          "team1": "Chicago Bears",
+          "team2": "Houston Texans",
+          "gameTime": "Sunday, Sep 15, 2024 @ 7:20 PM",
+          "consensus": "",
+          "outcome": ""
+        },
+        {
+          "team1": "Atlanta Falcons",
+          "team2": "Philadelphia Eagles",
+          "gameTime": "Monday, Sep 16, 2024 @ 7:15 PM",
+          "consensus": "",
+          "outcome": ""
+        }
+      ]
+    }
+  ]
+}

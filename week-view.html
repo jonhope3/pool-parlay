@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="icon" href="./resources/assets/pool-bluer.png" type="image/png">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <title>Pool Parlay</title>
+</head>
+<body>
+<header>
+    <a href="./index.html" style="text-decoration: none; color: white;">
+        <h1>Pool Parlay</h1>
+    </a>
+    <div class="menu">
+        <!-- Dropdown button for selecting week -->
+        <button>Select Week</button>
+        <div class="dropdown-content">
+            <a href="#" data-week="index" onclick="changeWeek(event)">Home</a>
+            <a href="#" data-week="week1" onclick="changeWeek(event)">Week 1</a>
+            <a href="#" data-week="week2" onclick="changeWeek(event)">Week 2</a>
+        </div>
+    </div>
+</header>
+<main>
+    <h2 id="week-title">Week 2 NFL Parlay</h2>
+    <table>
+        <thead>
+        <tr>
+            <th>Game</th>
+            <th>Game Time (CDT)</th>
+            <th>Consensus</th>
+            <th>Outcome</th>
+        </tr>
+        </thead>
+        <tbody>
+        <!-- Rows dynamically inserted here -->
+        </tbody>
+    </table>
+    <h2>Parlay Summary</h2>
+    <table>
+        <thead>
+        <tr>
+            <th>Parlay</th>
+            <th>Wager</th>
+            <th>Odds</th>
+            <th>Winnings</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td id="parlay-count"></td>
+            <td id="wager"></td>
+            <td id="odds"></td>
+            <td id="winnings"></td>
+        </tr>
+        </tbody>
+    </table>
+</main>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // Select the button and dropdown content elements
+        const button = document.querySelector('.menu button');
+        const dropdown = document.querySelector('.dropdown-content');
+
+        // Toggle dropdown visibility when button is clicked
+        button.addEventListener('click', function () {
+            const isVisible = dropdown.style.display === 'block'; // Check if dropdown is currently visible
+            dropdown.style.display = isVisible ? 'none' : 'block'; // Toggle visibility
+        });
+
+        // Hide dropdown if click is outside the menu
+        document.addEventListener('click', function (event) {
+            if (!button.contains(event.target) && !dropdown.contains(event.target)) {
+                dropdown.style.display = 'none'; // Hide dropdown if click is outside
+            }
+        });
+
+        // Function to get query parameter from URL
+        function getQueryParameter(name) {
+            const urlParams = new URLSearchParams(window.location.search); // Create URLSearchParams object from current URL
+            return urlParams.get(name); // Return the value of the specified query parameter
+        }
+
+        // Function to handle week selection from dropdown menu
+        window.changeWeek = function (event) {
+            event.preventDefault(); // Prevent default anchor behavior (e.g., page reload)
+            const week = event.target.getAttribute('data-week'); // Get the selected week from data attribute
+
+            if (week === 'index') {
+                // Redirect to index.html if 'index' is selected
+                window.location.href = 'index.html';
+                return;
+            }
+
+            // Update the page title and main heading
+            const weekNumber = week.replace('week', ''); // Extract week number from 'weekX'
+            document.title = `Pool Parlay | Week ${weekNumber}`; // Set the page title
+            const weekTitle = document.getElementById('week-title');
+            weekTitle.textContent = `Week ${weekNumber} NFL Parlay`; // Update the main heading text
+
+            // Update URL with query parameter to reflect the selected week
+            window.history.pushState({}, '', `week-view.html?week=${week}`);
+
+            // Load the data for the selected week
+            loadWeekData(parseInt(weekNumber)); // Convert week number to integer and pass to loadWeekData
+        };
+
+        // Function to load data for a specific week
+        function loadWeekData(week) {
+            const url = './resources/season_data.json'; // URL to the JSON file containing season data
+
+            fetch(url) // Fetch the JSON data from the server
+                .then(response => response.json()) // Parse the response as JSON
+                .then(data => {
+                    // Find data for the specified week
+                    const weekData = data.weeks.find(w => w.week === week);
+                    if (weekData) {
+                        const tableBody = document.querySelector('main table tbody');
+                        tableBody.innerHTML = ''; // Clear existing rows in the table
+
+                        // Insert new rows for each game
+                        weekData.games.forEach(game => {
+                            const row = document.createElement('tr');
+                            let outcomeDisplay = '';
+                            // Determine outcome icon based on game outcome
+                            if (game.outcome === 'W') {
+                                outcomeDisplay = `<span class="material-icons success-icon">check</span>`;
+                            } else if (game.outcome === 'L') {
+                                outcomeDisplay = `<span class="material-icons fail-icon">close</span>`;
+                            }
+
+                            row.innerHTML = `
+                                <td>
+                                    <span class="full-team">${game.team1} @ ${game.team2}</span>
+                                    <span class="short-team">${game.team1.split(' ')[0]} @ ${game.team2.split(' ')[0]}</span>
+                                </td>
+                                <td>${game.gameTime}</td>
+                                <td>${game.consensus}</td>
+                                <td><span class="material-icons">${outcomeDisplay}</span></td>
+                            `; // Construct the HTML for each row
+
+                            tableBody.appendChild(row); // Append the new row to the table body
+                        });
+
+                        updateParlayCount(); // Update the parlay count after loading new data
+                    } else {
+                        console.error('Week data not found'); // Log an error if no data for the specified week
+                    }
+                })
+                .catch(error => console.error('Error fetching the data:', error)); // Handle any errors that occur during data fetch
+        }
+
+        // Load week data based on query parameter
+        const week = getQueryParameter('week'); // Get the week from the query parameter
+        if(week) {
+            const weekNumber = week.replace('week', ''); // Extract week number from 'weekX'
+            document.title = `Pool Parlay | Week ${weekNumber}`; // Set the page title
+            const weekTitle = document.getElementById('week-title');
+            weekTitle.textContent = `Week ${weekNumber} NFL Parlay`; // Update the main heading text
+            loadWeekData(parseInt(weekNumber)); // Load data for the selected week
+        } else {
+            // Default to Week 0 if no week query parameter is present
+            window.history.pushState({}, '', 'week-view.html?week=week0');
+            document.title = 'Pool Parlay | Week 0';
+            var weekTitle = document.getElementById('week-title');
+            weekTitle.textContent = 'Week 0 NFL Parlay';
+            loadWeekData(0);
+        }
+
+        // Function to update the parlay count in the summary
+        function updateParlayCount() {
+            const table = document.querySelector('main table');
+            const consensusCells = table.querySelectorAll('tbody tr td:nth-child(3)');
+            let nonEmptyCount = 0;
+            const totalGames = consensusCells.length;
+
+            // Count the number of non-empty consensus cells
+            consensusCells.forEach(function (cell) {
+                if (cell.textContent.trim() !== '') {
+                    nonEmptyCount++; // Increment count if cell is not empty
+                }
+            });
+
+            const parlayCountCell = document.getElementById('parlay-count');
+            parlayCountCell.textContent = `${nonEmptyCount} / ${totalGames}`; // Display the count of non-empty consensus cells
+        }
+    });
+</script>
+</body>
+</html>
