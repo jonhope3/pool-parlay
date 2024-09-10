@@ -133,8 +133,8 @@
 
                             row.innerHTML = `
                                 <td>
-                                    <span class="full-team">${game.team1} @ ${game.team2}</span>
-                                    <span class="short-team">${game.team1.split(' ')[0]} @ ${game.team2.split(' ')[0]}</span>
+                                    <span class="full-team">${game.awayTeam.fullName} @ ${game.homeTeam.fullName}</span>
+                                    <span class="short-team">${game.awayTeam.teamName} @ ${game.homeTeam.teamName}</span>
                                 </td>
                                 <td>${game.gameTime}</td>
                                 <td>${game.consensus}</td>
