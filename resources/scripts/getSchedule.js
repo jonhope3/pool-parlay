@@ -47,13 +47,14 @@ async function getSchedule(year, week) {
             allEvents.push(...events);
         }
 
-        // Build the JSON output with only the 'games' array
+        // Build the JSON output with game IDs, names, and dates
         const games = allEvents.map(event => {
-            const { name, shortName, date: eventDate } = event;
+            const { id, name, shortName, date: eventDate } = event;
             const eventTimeUtc = parseISO(eventDate);
             const eventTimeCt = toZonedTime(eventTimeUtc, timeZone);
 
             return {
+                id, // Include game ID
                 game: name,
                 shortName,
                 dateTime: `${formatInTimeZone(eventTimeCt, timeZone, 'eeee, MMM d, yyyy @ h:mm a')} CT`,
