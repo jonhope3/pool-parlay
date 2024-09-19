@@ -34,13 +34,14 @@ async function fetchScheduleForDate(date) {
     }
 }
 
-// Helper function to parse team information
-function parseTeam(team, homeAway) {
+// Helper function to parse team information including logos
+function parseTeam(team) {
     return {
         fullName: team.displayName,
         cityName: team.location,
         teamName: team.name,
         cityShort: team.abbreviation,
+        logoUrl: team.logo, // Add the team's logo URL if available
     };
 }
 
@@ -66,8 +67,8 @@ async function getSchedule(year, week) {
             const homeTeamData = competitions[0]?.competitors.find(c => c.homeAway === 'home').team;
             const awayTeamData = competitions[0]?.competitors.find(c => c.homeAway === 'away').team;
 
-            const homeTeam = parseTeam(homeTeamData, 'home');
-            const awayTeam = parseTeam(awayTeamData, 'away');
+            const homeTeam = parseTeam(homeTeamData);
+            const awayTeam = parseTeam(awayTeamData);
 
             return {
                 homeTeam,

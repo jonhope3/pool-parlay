@@ -106,6 +106,7 @@ async function createForm(auth) {
                         createItem: {
                             item: {
                                 title: `${game.awayTeam.teamName} at ${game.homeTeam.teamName}`,
+                                description: `Game Time: ${game.gameTime}`,
                                 questionItem: {
                                     question: {
                                         required: true,
