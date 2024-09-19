@@ -34,6 +34,16 @@ async function fetchScheduleForDate(date) {
     }
 }
 
+// Helper function to parse team information
+function parseTeam(team, homeAway) {
+    return {
+        fullName: team.displayName,
+        cityName: team.location,
+        teamName: team.name,
+        cityShort: team.abbreviation,
+    };
+}
+
 // Function to fetch the NFL schedule for the date range and output as JSON
 async function getSchedule(year, week) {
     try {
@@ -47,25 +57,41 @@ async function getSchedule(year, week) {
             allEvents.push(...events);
         }
 
-        // Build the JSON output with game IDs, names, and dates
+        // Build the JSON output
         const games = allEvents.map(event => {
-            const { id, name, shortName, date: eventDate } = event;
+            const { date: eventDate, competitions } = event;
             const eventTimeUtc = parseISO(eventDate);
             const eventTimeCt = toZonedTime(eventTimeUtc, timeZone);
 
+            const homeTeamData = competitions[0]?.competitors.find(c => c.homeAway === 'home').team;
+            const awayTeamData = competitions[0]?.competitors.find(c => c.homeAway === 'away').team;
+
+            const homeTeam = parseTeam(homeTeamData, 'home');
+            const awayTeam = parseTeam(awayTeamData, 'away');
+
             return {
-                id, // Include game ID
-                game: name,
-                shortName,
-                dateTime: `${formatInTimeZone(eventTimeCt, timeZone, 'eeee, MMM d, yyyy @ h:mm a')} CT`,
+                homeTeam,
+                awayTeam,
+                gameTime: `${formatInTimeZone(eventTimeCt, timeZone, 'eeee, MMM d, yyyy @ h:mm a')} CT`,
             };
         });
 
+        // Structure the output according to the format you requested
+        const schedule = {
+            season: year.toString(),
+            weeks: [
+                {
+                    week: week,
+                    games: games
+                }
+            ]
+        };
+
         // Write the JSON output to a file
         const fileName = `week${week}Schedule.json`;
-        const jsonOutput = JSON.stringify({ games }, null, 2);
+        const jsonOutput = JSON.stringify(schedule, null, 2);
         fs.writeFileSync(fileName, jsonOutput, 'utf8');
-        console.log(`Output:\n${JSON.stringify({ games }, null, 2)}`);
+        console.log(`Output:\n${jsonOutput}`);
         console.log(`Schedule saved to ${fileName}`);
     } catch (error) {
         console.error('Error fetching schedule:', error);
@@ -74,6 +100,6 @@ async function getSchedule(year, week) {
 
 // Example usage
 const year = 2024; // You can change this to the desired year
-const week = 2;    // You can change this to the desired week number
+const week = 3;    // You can change this to the desired week number
 
 getSchedule(year, week);
