@@ -53,10 +53,26 @@ async function fetchScoresForWeek() {
             return;
         }
 
-        let output = JSON.stringify(allCompletedGames, null, 2);
-        console.log(output);
-        fs.writeFileSync('completedGames.json', output);
-        console.log('Completed games data has been written to completedGames.json');
+        // Load the existing season data
+        const seasonData = JSON.parse(fs.readFileSync('../season_data.json', 'utf-8'));
+        const week1 = seasonData.weeks.find(week => week.week === 1);
+
+        // Update the week 1 games
+        week1.games.forEach(game => {
+            const completedGame = allCompletedGames.find(
+                completed => completed.homeTeam === game.homeTeam.fullName &&
+                    completed.awayTeam === game.awayTeam.fullName
+            );
+            if (completedGame) {
+                game.outcome = completedGame.homeScore > completedGame.awayScore ? 'W' : 'L';
+                game.consensus = ''; // Reset consensus if needed
+                // Optionally, you can set the score or other details if available
+            }
+        });
+
+        // Save the updated data back to the file
+        fs.writeFileSync('../season_data.json', JSON.stringify(seasonData, null, 2));
+        console.log('Season data has been updated and written to season_data.json');
 
     } catch (error) {
         console.error('Error fetching scores:', error);

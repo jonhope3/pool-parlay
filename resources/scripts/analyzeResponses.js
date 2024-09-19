@@ -1,10 +1,9 @@
 import fs from 'fs';
-import csv from 'csv-parser'
+import csv from 'csv-parser';
 
-// Get the input file name from command-line arguments
+// Define file paths
 const inputFile = process.argv[2];
-const outputFile = 'output.json';  // File indicating if all users agree
-const summaryFile = 'summary.json';  // File showing detailed picks
+const seasonDataFile = '../season_data.json';
 
 if (!inputFile) {
     console.error('Please provide the input CSV file as a command line argument.');
@@ -12,10 +11,9 @@ if (!inputFile) {
 }
 
 const results = {};
-const detailedResults = {};
 let games = [];
-const users = new Set();
 
+// Read the CSV file and process the data
 fs.createReadStream(inputFile)
     .pipe(csv())
     .on('headers', (headers) => {
@@ -25,59 +23,44 @@ fs.createReadStream(inputFile)
         games.forEach(game => {
             if (!results[game]) {
                 results[game] = [];
-                detailedResults[game] = {};
             }
             results[game].push(row[game]);
-
-            if (!detailedResults[game][row[game]]) {
-                detailedResults[game][row[game]] = [];
-            }
-            detailedResults[game][row[game]].push(row['Email Address']);
-            users.add(row['Email Address']);
         });
     })
     .on('end', () => {
-        const output = [];
-        const summary = [];
+        // Read the existing season data
+        const seasonData = JSON.parse(fs.readFileSync(seasonDataFile, 'utf-8'));
 
-        games.forEach(game => {
-            const teams = results[game] || [];
-            const teamCounts = {};
-            let allAgreeTeam = '';
+        // Process each game and determine consensus
+        seasonData.weeks.forEach(week => {
+            week.games.forEach(game => {
+                const gameKey = `${game.homeTeam.teamName} @ ${game.awayTeam.teamName}`;
+                if (results[gameKey]) {
+                    const teamCounts = {};
+                    let consensusTeam = '';
 
-            // Count occurrences of each team
-            teams.forEach(team => {
-                teamCounts[team] = (teamCounts[team] || 0) + 1;
-            });
-
-            // Find the team that all users agree on
-            for (const [team, count] of Object.entries(teamCounts)) {
-                if (count === users.size) {
-                    allAgreeTeam = team;
-                    break;
-                }
-            }
-
-            const uniqueTeams = new Set(teams);
-            const allAgree = allAgreeTeam !== '';
-            output.push({
-                Game: game,
-                AllUsersAgree: allAgree ? 'True' : 'False',
-                AgreedTeam: allAgreeTeam || 'None'
-            });
-
-            if (!allAgree) {
-                for (const [team, userList] of Object.entries(detailedResults[game])) {
-                    summary.push({
-                        Game: game,
-                        Team: team,
-                        Users: userList.join(', ')
+                    // Count occurrences of each team
+                    results[gameKey].forEach(team => {
+                        teamCounts[team] = (teamCounts[team] || 0) + 1;
                     });
+
+                    // Find the team that all users agree on
+                    for (const [team, count] of Object.entries(teamCounts)) {
+                        if (count === results[gameKey].length) {
+                            consensusTeam = team;
+                            break;
+                        }
+                    }
+
+                    // Update the consensus field if we have a consensus
+                    if (consensusTeam) {
+                        game.consensus = consensusTeam;
+                    }
                 }
-            }
+            });
         });
 
-        fs.writeFileSync(outputFile, JSON.stringify(output, null, 2));
-        fs.writeFileSync(summaryFile, JSON.stringify(summary, null, 2));
-        console.log('JSON files have been written to', outputFile, 'and', summaryFile);
+        // Save the updated season data
+        fs.writeFileSync(seasonDataFile, JSON.stringify(seasonData, null, 2));
+        console.log('Updated season_data.json with consensus data.');
     });

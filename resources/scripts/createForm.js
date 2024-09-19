@@ -1,9 +1,9 @@
 import fs from 'fs/promises';
 import path from 'path';
 import process from 'process';
-import {authenticate} from '@google-cloud/local-auth';
-import {google} from 'googleapis';
-import {fileURLToPath} from 'url';
+import { authenticate } from '@google-cloud/local-auth';
+import { google } from 'googleapis';
+import { fileURLToPath } from 'url';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -72,11 +72,12 @@ async function authorize() {
  * @param {google.auth.OAuth2} auth An authorized OAuth2 client.
  */
 async function createForm(auth) {
-    const forms = google.forms({version: 'v1', auth});
+    const forms = google.forms({ version: 'v1', auth });
 
     try {
         // Read the games data
         const data = JSON.parse(await fs.readFile(inputFile, 'utf8'));
+        const year = data.season
 
         // Loop through each week and create a form
         for (const weekData of data.weeks) {
@@ -84,7 +85,7 @@ async function createForm(auth) {
             const form = await forms.forms.create({
                 requestBody: {
                     info: {
-                        title: `NFL Week ${weekData.week} Predictions`,
+                        title: `🎉 ${year} Week ${weekData.week} NFL Predictions 🎉`,
                     },
                 },
             });
@@ -113,15 +114,25 @@ async function createForm(auth) {
                                         choiceQuestion: {
                                             type: 'RADIO',
                                             options: [
-                                                {value: `${game.awayTeam.teamName}`},
-                                                {value: `${game.homeTeam.teamName}`},
+                                                {
+                                                    value: `${game.awayTeam.teamName}`,
+                                                    // image: {
+                                                    //     url: game.awayTeam.logoUrl,
+                                                    // },
+                                                },
+                                                {
+                                                    value: `${game.homeTeam.teamName}`,
+                                                    // image: {
+                                                    //     url: game.homeTeam.logoUrl,
+                                                    // },
+                                                },
                                             ],
                                             shuffle: false,
                                         },
                                     },
                                 },
                             },
-                            location: {index: index},
+                            location: { index: index },
                         },
                     };
                 }),
