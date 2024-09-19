@@ -45,8 +45,8 @@ function parseTeam(team) {
     };
 }
 
-// Function to fetch the NFL schedule for the date range and output as JSON
-async function getSchedule(year, week) {
+// Function to fetch the NFL schedule for the date range and update the JSON file
+async function updateSeasonData(year, week) {
     try {
         const { start, end } = getWeekDateRange(year, week);
         const dates = eachDayOfInterval({ start, end });
@@ -58,7 +58,6 @@ async function getSchedule(year, week) {
             allEvents.push(...events);
         }
 
-        // Build the JSON output
         const games = allEvents.map(event => {
             const { date: eventDate, competitions } = event;
             const eventTimeUtc = parseISO(eventDate);
@@ -74,28 +73,30 @@ async function getSchedule(year, week) {
                 homeTeam,
                 awayTeam,
                 gameTime: `${formatInTimeZone(eventTimeCt, timeZone, 'eeee, MMM d, yyyy @ h:mm a')} CT`,
+                consensus: "", // This will be updated later if needed
+                outcome: ""    // This will be updated later if needed
             };
         });
 
-        // Structure the output according to the format you requested
-        const schedule = {
-            season: year.toString(),
-            weeks: [
-                {
-                    week: week,
-                    games: games
-                }
-            ]
-        };
+        // Read the existing season data from the file
+        const filePath = '../season_data.json';
+        const fileData = fs.readFileSync(filePath, 'utf8');
+        const seasonData = JSON.parse(fileData);
 
-        // Write the JSON output to a file
-        const fileName = `week${week}Schedule.json`;
-        const jsonOutput = JSON.stringify(schedule, null, 2);
-        fs.writeFileSync(fileName, jsonOutput, 'utf8');
-        console.log(`Output:\n${jsonOutput}`);
-        console.log(`Schedule saved to ${fileName}`);
+        // Find the correct week and update it
+        const weekData = seasonData.weeks.find(w => w.week === week);
+        if (weekData) {
+            weekData.games = games;
+        } else {
+            seasonData.weeks.push({ week, games });
+        }
+
+        // Write the updated JSON back to the file
+        const jsonOutput = JSON.stringify(seasonData, null, 2);
+        fs.writeFileSync(filePath, jsonOutput, 'utf8');
+        console.log(`Updated season data saved to ${filePath}`);
     } catch (error) {
-        console.error('Error fetching schedule:', error);
+        console.error('Error updating season data:', error);
     }
 }
 
@@ -103,4 +104,4 @@ async function getSchedule(year, week) {
 const year = 2024; // You can change this to the desired year
 const week = 3;    // You can change this to the desired week number
 
-getSchedule(year, week);
+updateSeasonData(year, week);
