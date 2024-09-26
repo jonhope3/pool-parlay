@@ -1,7 +1,8 @@
 import axios from 'axios';
 import { eachDayOfInterval, parseISO, addDays, nextDay } from 'date-fns';
 import { formatInTimeZone, toZonedTime } from 'date-fns-tz';
-import fs from 'fs'; // Import the fs module
+import fs from 'fs';
+import process from "process"; // Import the fs module
 
 // Timezone for Central Time (CT)
 const timeZone = 'America/Chicago';
@@ -102,6 +103,6 @@ async function updateSeasonData(year, week) {
 
 // Example usage
 const year = 2024; // You can change this to the desired year
-const week = 4;    // You can change this to the desired week number
+const selectedWeek = parseInt(process.argv[2]); // Get the selected week from command line argument
 
-updateSeasonData(year, week);
+updateSeasonData(year, selectedWeek);
