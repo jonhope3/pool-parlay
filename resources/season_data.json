@@ -1,0 +1,1181 @@
+{
+  "season": "2024",
+  "weeks": [
+    {
+      "week": 0,
+      "games": []
+    },
+    {
+      "week": 1,
+      "games": [
+        {
+          "homeTeam": {
+            "fullName": "Baltimore Ravens",
+            "cityName": "Baltimore",
+            "teamName": "Ravens",
+            "cityShort": "BAL"
+          },
+          "awayTeam": {
+            "fullName": "Kansas City Chiefs",
+            "cityName": "Kansas City",
+            "teamName": "Chiefs",
+            "cityShort": "KC"
+          },
+          "gameTime": "Thursday, Sep 5, 2024 @ 7:20 PM",
+          "consensus": "Chiefs",
+          "outcome": "W"
+        },
+        {
+          "homeTeam": {
+            "fullName": "Green Bay Packers",
+            "cityName": "Green Bay",
+            "teamName": "Packers",
+            "cityShort": "GB"
+          },
+          "awayTeam": {
+            "fullName": "Philadelphia Eagles",
+            "cityName": "Philadelphia",
+            "teamName": "Eagles",
+            "cityShort": "PHI"
+          },
+          "gameTime": "Friday, Sep 6, 2024 @ 7:15 PM",
+          "consensus": "",
+          "outcome": ""
+        },
+        {
+          "homeTeam": {
+            "fullName": "Jacksonville Jaguars",
+            "cityName": "Jacksonville",
+            "teamName": "Jaguars",
+            "cityShort": "JAC"
+          },
+          "awayTeam": {
+            "fullName": "Miami Dolphins",
+            "cityName": "Miami",
+            "teamName": "Dolphins",
+            "cityShort": "MIA"
+          },
+          "gameTime": "Sunday, Sep 8, 2024 @ 12:00 PM",
+          "consensus": "",
+          "outcome": ""
+        },
+        {
+          "homeTeam": {
+            "fullName": "Arizona Cardinals",
+            "cityName": "Arizona",
+            "teamName": "Cardinals",
+            "cityShort": "ARI"
+          },
+          "awayTeam": {
+            "fullName": "Buffalo Bills",
+            "cityName": "Buffalo",
+            "teamName": "Bills",
+            "cityShort": "BUF"
+          },
+          "gameTime": "Sunday, Sep 8, 2024 @ 12:00 PM",
+          "consensus": "Bills",
+          "outcome": "W"
+        },
+        {
+          "homeTeam": {
+            "fullName": "Pittsburgh Steelers",
+            "cityName": "Pittsburgh",
+            "teamName": "Steelers",
+            "cityShort": "PIT"
+          },
+          "awayTeam": {
+            "fullName": "Atlanta Falcons",
+            "cityName": "Atlanta",
+            "teamName": "Falcons",
+            "cityShort": "ATL"
+          },
+          "gameTime": "Sunday, Sep 8, 2024 @ 12:00 PM",
+          "consensus": "",
+          "outcome": ""
+        },
+        {
+          "homeTeam": {
+            "fullName": "Minnesota Vikings",
+            "cityName": "Minnesota",
+            "teamName": "Vikings",
+            "cityShort": "MIN"
+          },
+          "awayTeam": {
+            "fullName": "New York Giants",
+            "cityName": "New York",
+            "teamName": "Giants",
+            "cityShort": "NYG"
+          },
+          "gameTime": "Sunday, Sep 8, 2024 @ 12:00 PM",
+          "consensus": "Vikings",
+          "outcome": "W"
+        },
+        {
+          "homeTeam": {
+            "fullName": "Tennessee Titans",
+            "cityName": "Tennessee",
+            "teamName": "Titans",
+            "cityShort": "TEN"
+          },
+          "awayTeam": {
+            "fullName": "Chicago Bears",
+            "cityName": "Chicago",
+            "teamName": "Bears",
+            "cityShort": "CHI"
+          },
+          "gameTime": "Sunday, Sep 8, 2024 @ 12:00 PM",
+          "consensus": "Bears",
+          "outcome": "W"
+        },
+        {
+          "homeTeam": {
+            "fullName": "New England Patriots",
+            "cityName": "New England",
+            "teamName": "Patriots",
+            "cityShort": "NE"
+          },
+          "awayTeam": {
+            "fullName": "Cincinnati Bengals",
+            "cityName": "Cincinnati",
+            "teamName": "Bengals",
+            "cityShort": "CIN"
+          },
+          "gameTime": "Sunday, Sep 8, 2024 @ 12:00 PM",
+          "consensus": "Bengals",
+          "outcome": "L"
+        },
+        {
+          "homeTeam": {
+            "fullName": "Carolina Panthers",
+            "cityName": "Carolina",
+            "teamName": "Panthers",
+            "cityShort": "CAR"
+          },
+          "awayTeam": {
+            "fullName": "New Orleans Saints",
+            "cityName": "New Orleans",
+            "teamName": "Saints",
+            "cityShort": "NO"
+          },
+          "gameTime": "Sunday, Sep 8, 2024 @ 12:00 PM",
+          "consensus": "Saints",
+          "outcome": "W"
+        },
+        {
+          "homeTeam": {
+            "fullName": "Houston Texans",
+            "cityName": "Houston",
+            "teamName": "Texans",
+            "cityShort": "HOU"
+          },
+          "awayTeam": {
+            "fullName": "Indianapolis Colts",
+            "cityName": "Indianapolis",
+            "teamName": "Colts",
+            "cityShort": "IND"
+          },
+          "gameTime": "Sunday, Sep 8, 2024 @ 12:00 PM",
+          "consensus": "Texans",
+          "outcome": "W"
+        },
+        {
+          "homeTeam": {
+            "fullName": "Denver Broncos",
+            "cityName": "Denver",
+            "teamName": "Broncos",
+            "cityShort": "DEN"
+          },
+          "awayTeam": {
+            "fullName": "Seattle Seahawks",
+            "cityName": "Seattle",
+            "teamName": "Seahawks",
+            "cityShort": "SEA"
+          },
+          "gameTime": "Sunday, Sep 8, 2024 @ 3:05 PM",
+          "consensus": "Seahawks",
+          "outcome": "W"
+        },
+        {
+          "homeTeam": {
+            "fullName": "Las Vegas Raiders",
+            "cityName": "Las Vegas",
+            "teamName": "Raiders",
+            "cityShort": "LV"
+          },
+          "awayTeam": {
+            "fullName": "Los Angeles Chargers",
+            "cityName": "Los Angeles",
+            "teamName": "Chargers",
+            "cityShort": "LAC"
+          },
+          "gameTime": "Sunday, Sep 8, 2024 @ 3:05 PM",
+          "consensus": "",
+          "outcome": ""
+        },
+        {
+          "homeTeam": {
+            "fullName": "Washington Commanders",
+            "cityName": "Washington",
+            "teamName": "Commanders",
+            "cityShort": "WAS"
+          },
+          "awayTeam": {
+            "fullName": "Tampa Bay Buccaneers",
+            "cityName": "Tampa Bay",
+            "teamName": "Buccaneers",
+            "cityShort": "TB"
+          },
+          "gameTime": "Sunday, Sep 8, 2024 @ 3:25 PM",
+          "consensus": "Buccaneers",
+          "outcome": "W"
+        },
+        {
+          "homeTeam": {
+            "fullName": "Dallas Cowboys",
+            "cityName": "Dallas",
+            "teamName": "Cowboys",
+            "cityShort": "DAL"
+          },
+          "awayTeam": {
+            "fullName": "Cleveland Browns",
+            "cityName": "Cleveland",
+            "teamName": "Browns",
+            "cityShort": "CLE"
+          },
+          "gameTime": "Sunday, Sep 8, 2024 @ 3:25 PM",
+          "consensus": "Cowboys",
+          "outcome": "W"
+        },
+        {
+          "homeTeam": {
+            "fullName": "Los Angeles Rams",
+            "cityName": "Los Angeles",
+            "teamName": "Rams",
+            "cityShort": "LAR"
+          },
+          "awayTeam": {
+            "fullName": "Detroit Lions",
+            "cityName": "Detroit",
+            "teamName": "Lions",
+            "cityShort": "DET"
+          },
+          "gameTime": "Sunday, Sep 8, 2024 @ 7:20 PM",
+          "consensus": "Lions",
+          "outcome": "W"
+        },
+        {
+          "homeTeam": {
+            "fullName": "San Francisco 49ers",
+            "cityName": "San Francisco",
+            "teamName": "49ers",
+            "cityShort": "SF"
+          },
+          "awayTeam": {
+            "fullName": "Arizona Cardinals",
+            "cityName": "Arizona",
+            "teamName": "Cardinals",
+            "cityShort": "ARI"
+          },
+          "gameTime": "Monday, Sep 9, 2024 @ 7:15 PM",
+          "consensus": "49ers",
+          "outcome": "W"
+        }
+      ]
+    },
+    {
+      "week": 2,
+      "games": [
+        {
+          "homeTeam": {
+            "fullName": "Buffalo Bills",
+            "cityName": "Buffalo",
+            "teamName": "Bills",
+            "cityShort": "BUF"
+          },
+          "awayTeam": {
+            "fullName": "Miami Dolphins",
+            "cityName": "Miami",
+            "teamName": "Dolphins",
+            "cityShort": "MIA"
+          },
+          "gameTime": "Thursday, Sep 12, 2024 @ 7:15 PM",
+          "consensus": "",
+          "outcome": ""
+        },
+        {
+          "homeTeam": {
+            "fullName": "New Orleans Saints",
+            "cityName": "New Orleans",
+            "teamName": "Saints",
+            "cityShort": "NO"
+          },
+          "awayTeam": {
+            "fullName": "Dallas Cowboys",
+            "cityName": "Dallas",
+            "teamName": "Cowboys",
+            "cityShort": "DAL"
+          },
+          "gameTime": "Sunday, Sep 15, 2024 @ 12:00 PM",
+          "consensus": "Cowboys",
+          "outcome": ""
+        },
+        {
+          "homeTeam": {
+            "fullName": "Tampa Bay Buccaneers",
+            "cityName": "Tampa Bay",
+            "teamName": "Buccaneers",
+            "cityShort": "TB"
+          },
+          "awayTeam": {
+            "fullName": "Detroit Lions",
+            "cityName": "Detroit",
+            "teamName": "Lions",
+            "cityShort": "DET"
+          },
+          "gameTime": "Sunday, Sep 15, 2024 @ 12:00 PM",
+          "consensus": "Lions",
+          "outcome": ""
+        },
+        {
+          "homeTeam": {
+            "fullName": "Indianapolis Colts",
+            "cityName": "Indianapolis",
+            "teamName": "Colts",
+            "cityShort": "IND"
+          },
+          "awayTeam": {
+            "fullName": "Green Bay Packers",
+            "cityName": "Green Bay",
+            "teamName": "Packers",
+            "cityShort": "GB"
+          },
+          "gameTime": "Sunday, Sep 15, 2024 @ 12:00 PM",
+          "consensus": "Colts",
+          "outcome": ""
+        },
+        {
+          "homeTeam": {
+            "fullName": "New York Jets",
+            "cityName": "New York",
+            "teamName": "Jets",
+            "cityShort": "NYJ"
+          },
+          "awayTeam": {
+            "fullName": "Tennessee Titans",
+            "cityName": "Tennessee",
+            "teamName": "Titans",
+            "cityShort": "TEN"
+          },
+          "gameTime": "Sunday, Sep 15, 2024 @ 12:00 PM",
+          "consensus": "",
+          "outcome": ""
+        },
+        {
+          "homeTeam": {
+            "fullName": "San Francisco 49ers",
+            "cityName": "San Francisco",
+            "teamName": "49ers",
+            "cityShort": "SF"
+          },
+          "awayTeam": {
+            "fullName": "Minnesota Vikings",
+            "cityName": "Minnesota",
+            "teamName": "Vikings",
+            "cityShort": "MIN"
+          },
+          "gameTime": "Sunday, Sep 15, 2024 @ 12:00 PM",
+          "consensus": "49ers",
+          "outcome": ""
+        },
+        {
+          "homeTeam": {
+            "fullName": "Seattle Seahawks",
+            "cityName": "Seattle",
+            "teamName": "Seahawks",
+            "cityShort": "SEA"
+          },
+          "awayTeam": {
+            "fullName": "New England Patriots",
+            "cityName": "New England",
+            "teamName": "Patriots",
+            "cityShort": "NE"
+          },
+          "gameTime": "Sunday, Sep 15, 2024 @ 12:00 PM",
+          "consensus": "",
+          "outcome": ""
+        },
+        {
+          "homeTeam": {
+            "fullName": "New York Giants",
+            "cityName": "New York",
+            "teamName": "Giants",
+            "cityShort": "NYG"
+          },
+          "awayTeam": {
+            "fullName": "Washington Commanders",
+            "cityName": "Washington",
+            "teamName": "Commanders",
+            "cityShort": "WAS"
+          },
+          "gameTime": "Sunday, Sep 15, 2024 @ 12:00 PM",
+          "consensus": "Commanders",
+          "outcome": ""
+        },
+        {
+          "homeTeam": {
+            "fullName": "Los Angeles Chargers",
+            "cityName": "Los Angeles",
+            "teamName": "Chargers",
+            "cityShort": "LAC"
+          },
+          "awayTeam": {
+            "fullName": "Carolina Panthers",
+            "cityName": "Carolina",
+            "teamName": "Panthers",
+            "cityShort": "CAR"
+          },
+          "gameTime": "Sunday, Sep 15, 2024 @ 12:00 PM",
+          "consensus": "Chargers",
+          "outcome": ""
+        },
+        {
+          "homeTeam": {
+            "fullName": "Cleveland Browns",
+            "cityName": "Cleveland",
+            "teamName": "Browns",
+            "cityShort": "CLE"
+          },
+          "awayTeam": {
+            "fullName": "Jacksonville Jaguars",
+            "cityName": "Jacksonville",
+            "teamName": "Jaguars",
+            "cityShort": "JAC"
+          },
+          "gameTime": "Sunday, Sep 15, 2024 @ 12:00 PM",
+          "consensus": "Jaguars",
+          "outcome": ""
+        },
+        {
+          "homeTeam": {
+            "fullName": "Las Vegas Raiders",
+            "cityName": "Las Vegas",
+            "teamName": "Raiders",
+            "cityShort": "LV"
+          },
+          "awayTeam": {
+            "fullName": "Baltimore Ravens",
+            "cityName": "Baltimore",
+            "teamName": "Ravens",
+            "cityShort": "BAL"
+          },
+          "gameTime": "Sunday, Sep 15, 2024 @ 12:00 PM",
+          "consensus": "",
+          "outcome": ""
+        },
+        {
+          "homeTeam": {
+            "fullName": "Los Angeles Rams",
+            "cityName": "Los Angeles",
+            "teamName": "Rams",
+            "cityShort": "LAR"
+          },
+          "awayTeam": {
+            "fullName": "Arizona Cardinals",
+            "cityName": "Arizona",
+            "teamName": "Cardinals",
+            "cityShort": "ARI"
+          },
+          "gameTime": "Sunday, Sep 15, 2024 @ 3:05 PM",
+          "consensus": "",
+          "outcome": ""
+        },
+        {
+          "homeTeam": {
+            "fullName": "Pittsburgh Steelers",
+            "cityName": "Pittsburgh",
+            "teamName": "Steelers",
+            "cityShort": "PIT"
+          },
+          "awayTeam": {
+            "fullName": "Denver Broncos",
+            "cityName": "Denver",
+            "teamName": "Broncos",
+            "cityShort": "DEN"
+          },
+          "gameTime": "Sunday, Sep 15, 2024 @ 3:25 PM",
+          "consensus": "",
+          "outcome": ""
+        },
+        {
+          "homeTeam": {
+            "fullName": "Cincinnati Bengals",
+            "cityName": "Cincinnati",
+            "teamName": "Bengals",
+            "cityShort": "CIN"
+          },
+          "awayTeam": {
+            "fullName": "Kansas City Chiefs",
+            "cityName": "Kansas City",
+            "teamName": "Chiefs",
+            "cityShort": "KC"
+          },
+          "gameTime": "Sunday, Sep 15, 2024 @ 3:25 PM",
+          "consensus": "Chiefs",
+          "outcome": ""
+        },
+        {
+          "homeTeam": {
+            "fullName": "Chicago Bears",
+            "cityName": "Chicago",
+            "teamName": "Bears",
+            "cityShort": "CHI"
+          },
+          "awayTeam": {
+            "fullName": "Houston Texans",
+            "cityName": "Houston",
+            "teamName": "Texans",
+            "cityShort": "HOU"
+          },
+          "gameTime": "Sunday, Sep 15, 2024 @ 7:20 PM",
+          "consensus": "",
+          "outcome": ""
+        },
+        {
+          "homeTeam": {
+            "fullName": "Atlanta Falcons",
+            "cityName": "Atlanta",
+            "teamName": "Falcons",
+            "cityShort": "ATL"
+          },
+          "awayTeam": {
+            "fullName": "Philadelphia Eagles",
+            "cityName": "Philadelphia",
+            "teamName": "Eagles",
+            "cityShort": "PHI"
+          },
+          "gameTime": "Monday, Sep 16, 2024 @ 7:15 PM",
+          "consensus": "Eagles",
+          "outcome": ""
+        }
+      ]
+    },
+    {
+      "week": 3,
+      "games": [
+        {
+          "homeTeam": {
+            "fullName": "New York Jets",
+            "cityName": "New York",
+            "teamName": "Jets",
+            "cityShort": "NYJ",
+            "logoUrl": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/nyj.png"
+          },
+          "awayTeam": {
+            "fullName": "New England Patriots",
+            "cityName": "New England",
+            "teamName": "Patriots",
+            "cityShort": "NE",
+            "logoUrl": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/ne.png"
+          },
+          "gameTime": "Thursday, Sep 19, 2024 @ 7:15 PM CT",
+          "consensus": "",
+          "outcome": ""
+        },
+        {
+          "homeTeam": {
+            "fullName": "Cleveland Browns",
+            "cityName": "Cleveland",
+            "teamName": "Browns",
+            "cityShort": "CLE",
+            "logoUrl": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/cle.png"
+          },
+          "awayTeam": {
+            "fullName": "New York Giants",
+            "cityName": "New York",
+            "teamName": "Giants",
+            "cityShort": "NYG",
+            "logoUrl": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/nyg.png"
+          },
+          "gameTime": "Sunday, Sep 22, 2024 @ 12:00 PM CT",
+          "consensus": "",
+          "outcome": ""
+        },
+        {
+          "homeTeam": {
+            "fullName": "Tennessee Titans",
+            "cityName": "Tennessee",
+            "teamName": "Titans",
+            "cityShort": "TEN",
+            "logoUrl": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/ten.png"
+          },
+          "awayTeam": {
+            "fullName": "Green Bay Packers",
+            "cityName": "Green Bay",
+            "teamName": "Packers",
+            "cityShort": "GB",
+            "logoUrl": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/gb.png"
+          },
+          "gameTime": "Sunday, Sep 22, 2024 @ 12:00 PM CT",
+          "consensus": "",
+          "outcome": ""
+        },
+        {
+          "homeTeam": {
+            "fullName": "Indianapolis Colts",
+            "cityName": "Indianapolis",
+            "teamName": "Colts",
+            "cityShort": "IND",
+            "logoUrl": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/ind.png"
+          },
+          "awayTeam": {
+            "fullName": "Chicago Bears",
+            "cityName": "Chicago",
+            "teamName": "Bears",
+            "cityShort": "CHI",
+            "logoUrl": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/chi.png"
+          },
+          "gameTime": "Sunday, Sep 22, 2024 @ 12:00 PM CT",
+          "consensus": "",
+          "outcome": ""
+        },
+        {
+          "homeTeam": {
+            "fullName": "Minnesota Vikings",
+            "cityName": "Minnesota",
+            "teamName": "Vikings",
+            "cityShort": "MIN",
+            "logoUrl": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/min.png"
+          },
+          "awayTeam": {
+            "fullName": "Houston Texans",
+            "cityName": "Houston",
+            "teamName": "Texans",
+            "cityShort": "HOU",
+            "logoUrl": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/hou.png"
+          },
+          "gameTime": "Sunday, Sep 22, 2024 @ 12:00 PM CT",
+          "consensus": "",
+          "outcome": ""
+        },
+        {
+          "homeTeam": {
+            "fullName": "New Orleans Saints",
+            "cityName": "New Orleans",
+            "teamName": "Saints",
+            "cityShort": "NO",
+            "logoUrl": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/no.png"
+          },
+          "awayTeam": {
+            "fullName": "Philadelphia Eagles",
+            "cityName": "Philadelphia",
+            "teamName": "Eagles",
+            "cityShort": "PHI",
+            "logoUrl": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/phi.png"
+          },
+          "gameTime": "Sunday, Sep 22, 2024 @ 12:00 PM CT",
+          "consensus": "",
+          "outcome": ""
+        },
+        {
+          "homeTeam": {
+            "fullName": "Pittsburgh Steelers",
+            "cityName": "Pittsburgh",
+            "teamName": "Steelers",
+            "cityShort": "PIT",
+            "logoUrl": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/pit.png"
+          },
+          "awayTeam": {
+            "fullName": "Los Angeles Chargers",
+            "cityName": "Los Angeles",
+            "teamName": "Chargers",
+            "cityShort": "LAC",
+            "logoUrl": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/lac.png"
+          },
+          "gameTime": "Sunday, Sep 22, 2024 @ 12:00 PM CT",
+          "consensus": "",
+          "outcome": ""
+        },
+        {
+          "homeTeam": {
+            "fullName": "Tampa Bay Buccaneers",
+            "cityName": "Tampa Bay",
+            "teamName": "Buccaneers",
+            "cityShort": "TB",
+            "logoUrl": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/tb.png"
+          },
+          "awayTeam": {
+            "fullName": "Denver Broncos",
+            "cityName": "Denver",
+            "teamName": "Broncos",
+            "cityShort": "DEN",
+            "logoUrl": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/den.png"
+          },
+          "gameTime": "Sunday, Sep 22, 2024 @ 12:00 PM CT",
+          "consensus": "",
+          "outcome": ""
+        },
+        {
+          "homeTeam": {
+            "fullName": "Las Vegas Raiders",
+            "cityName": "Las Vegas",
+            "teamName": "Raiders",
+            "cityShort": "LV",
+            "logoUrl": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/lv.png"
+          },
+          "awayTeam": {
+            "fullName": "Carolina Panthers",
+            "cityName": "Carolina",
+            "teamName": "Panthers",
+            "cityShort": "CAR",
+            "logoUrl": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/car.png"
+          },
+          "gameTime": "Sunday, Sep 22, 2024 @ 3:05 PM CT",
+          "consensus": "",
+          "outcome": ""
+        },
+        {
+          "homeTeam": {
+            "fullName": "Seattle Seahawks",
+            "cityName": "Seattle",
+            "teamName": "Seahawks",
+            "cityShort": "SEA",
+            "logoUrl": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/sea.png"
+          },
+          "awayTeam": {
+            "fullName": "Miami Dolphins",
+            "cityName": "Miami",
+            "teamName": "Dolphins",
+            "cityShort": "MIA",
+            "logoUrl": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/mia.png"
+          },
+          "gameTime": "Sunday, Sep 22, 2024 @ 3:05 PM CT",
+          "consensus": "",
+          "outcome": ""
+        },
+        {
+          "homeTeam": {
+            "fullName": "Dallas Cowboys",
+            "cityName": "Dallas",
+            "teamName": "Cowboys",
+            "cityShort": "DAL",
+            "logoUrl": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/dal.png"
+          },
+          "awayTeam": {
+            "fullName": "Baltimore Ravens",
+            "cityName": "Baltimore",
+            "teamName": "Ravens",
+            "cityShort": "BAL",
+            "logoUrl": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/bal.png"
+          },
+          "gameTime": "Sunday, Sep 22, 2024 @ 3:25 PM CT",
+          "consensus": "",
+          "outcome": ""
+        },
+        {
+          "homeTeam": {
+            "fullName": "Los Angeles Rams",
+            "cityName": "Los Angeles",
+            "teamName": "Rams",
+            "cityShort": "LAR",
+            "logoUrl": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/lar.png"
+          },
+          "awayTeam": {
+            "fullName": "San Francisco 49ers",
+            "cityName": "San Francisco",
+            "teamName": "49ers",
+            "cityShort": "SF",
+            "logoUrl": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/sf.png"
+          },
+          "gameTime": "Sunday, Sep 22, 2024 @ 3:25 PM CT",
+          "consensus": "",
+          "outcome": ""
+        },
+        {
+          "homeTeam": {
+            "fullName": "Arizona Cardinals",
+            "cityName": "Arizona",
+            "teamName": "Cardinals",
+            "cityShort": "ARI",
+            "logoUrl": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/ari.png"
+          },
+          "awayTeam": {
+            "fullName": "Detroit Lions",
+            "cityName": "Detroit",
+            "teamName": "Lions",
+            "cityShort": "DET",
+            "logoUrl": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/det.png"
+          },
+          "gameTime": "Sunday, Sep 22, 2024 @ 3:25 PM CT",
+          "consensus": "",
+          "outcome": ""
+        },
+        {
+          "homeTeam": {
+            "fullName": "Atlanta Falcons",
+            "cityName": "Atlanta",
+            "teamName": "Falcons",
+            "cityShort": "ATL",
+            "logoUrl": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/atl.png"
+          },
+          "awayTeam": {
+            "fullName": "Kansas City Chiefs",
+            "cityName": "Kansas City",
+            "teamName": "Chiefs",
+            "cityShort": "KC",
+            "logoUrl": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/kc.png"
+          },
+          "gameTime": "Sunday, Sep 22, 2024 @ 7:20 PM CT",
+          "consensus": "",
+          "outcome": ""
+        },
+        {
+          "homeTeam": {
+            "fullName": "Buffalo Bills",
+            "cityName": "Buffalo",
+            "teamName": "Bills",
+            "cityShort": "BUF",
+            "logoUrl": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/buf.png"
+          },
+          "awayTeam": {
+            "fullName": "Jacksonville Jaguars",
+            "cityName": "Jacksonville",
+            "teamName": "Jaguars",
+            "cityShort": "JAX",
+            "logoUrl": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/jax.png"
+          },
+          "gameTime": "Monday, Sep 23, 2024 @ 6:30 PM CT",
+          "consensus": "",
+          "outcome": ""
+        },
+        {
+          "homeTeam": {
+            "fullName": "Cincinnati Bengals",
+            "cityName": "Cincinnati",
+            "teamName": "Bengals",
+            "cityShort": "CIN",
+            "logoUrl": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/cin.png"
+          },
+          "awayTeam": {
+            "fullName": "Washington Commanders",
+            "cityName": "Washington",
+            "teamName": "Commanders",
+            "cityShort": "WSH",
+            "logoUrl": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/wsh.png"
+          },
+          "gameTime": "Monday, Sep 23, 2024 @ 7:15 PM CT",
+          "consensus": "",
+          "outcome": ""
+        }
+      ]
+    },
+    {
+      "week": 4,
+      "games": [
+        {
+          "homeTeam": {
+            "fullName": "New York Giants",
+            "cityName": "New York",
+            "teamName": "Giants",
+            "cityShort": "NYG",
+            "logoUrl": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/nyg.png"
+          },
+          "awayTeam": {
+            "fullName": "Dallas Cowboys",
+            "cityName": "Dallas",
+            "teamName": "Cowboys",
+            "cityShort": "DAL",
+            "logoUrl": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/dal.png"
+          },
+          "gameTime": "Thursday, Sep 26, 2024 @ 7:15 PM CT",
+          "consensus": "",
+          "outcome": ""
+        },
+        {
+          "homeTeam": {
+            "fullName": "Atlanta Falcons",
+            "cityName": "Atlanta",
+            "teamName": "Falcons",
+            "cityShort": "ATL",
+            "logoUrl": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/atl.png"
+          },
+          "awayTeam": {
+            "fullName": "New Orleans Saints",
+            "cityName": "New Orleans",
+            "teamName": "Saints",
+            "cityShort": "NO",
+            "logoUrl": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/no.png"
+          },
+          "gameTime": "Sunday, Sep 29, 2024 @ 12:00 PM CT",
+          "consensus": "",
+          "outcome": ""
+        },
+        {
+          "homeTeam": {
+            "fullName": "Chicago Bears",
+            "cityName": "Chicago",
+            "teamName": "Bears",
+            "cityShort": "CHI",
+            "logoUrl": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/chi.png"
+          },
+          "awayTeam": {
+            "fullName": "Los Angeles Rams",
+            "cityName": "Los Angeles",
+            "teamName": "Rams",
+            "cityShort": "LAR",
+            "logoUrl": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/lar.png"
+          },
+          "gameTime": "Sunday, Sep 29, 2024 @ 12:00 PM CT",
+          "consensus": "",
+          "outcome": ""
+        },
+        {
+          "homeTeam": {
+            "fullName": "Green Bay Packers",
+            "cityName": "Green Bay",
+            "teamName": "Packers",
+            "cityShort": "GB",
+            "logoUrl": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/gb.png"
+          },
+          "awayTeam": {
+            "fullName": "Minnesota Vikings",
+            "cityName": "Minnesota",
+            "teamName": "Vikings",
+            "cityShort": "MIN",
+            "logoUrl": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/min.png"
+          },
+          "gameTime": "Sunday, Sep 29, 2024 @ 12:00 PM CT",
+          "consensus": "",
+          "outcome": ""
+        },
+        {
+          "homeTeam": {
+            "fullName": "Indianapolis Colts",
+            "cityName": "Indianapolis",
+            "teamName": "Colts",
+            "cityShort": "IND",
+            "logoUrl": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/ind.png"
+          },
+          "awayTeam": {
+            "fullName": "Pittsburgh Steelers",
+            "cityName": "Pittsburgh",
+            "teamName": "Steelers",
+            "cityShort": "PIT",
+            "logoUrl": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/pit.png"
+          },
+          "gameTime": "Sunday, Sep 29, 2024 @ 12:00 PM CT",
+          "consensus": "",
+          "outcome": ""
+        },
+        {
+          "homeTeam": {
+            "fullName": "New York Jets",
+            "cityName": "New York",
+            "teamName": "Jets",
+            "cityShort": "NYJ",
+            "logoUrl": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/nyj.png"
+          },
+          "awayTeam": {
+            "fullName": "Denver Broncos",
+            "cityName": "Denver",
+            "teamName": "Broncos",
+            "cityShort": "DEN",
+            "logoUrl": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/den.png"
+          },
+          "gameTime": "Sunday, Sep 29, 2024 @ 12:00 PM CT",
+          "consensus": "",
+          "outcome": ""
+        },
+        {
+          "homeTeam": {
+            "fullName": "Tampa Bay Buccaneers",
+            "cityName": "Tampa Bay",
+            "teamName": "Buccaneers",
+            "cityShort": "TB",
+            "logoUrl": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/tb.png"
+          },
+          "awayTeam": {
+            "fullName": "Philadelphia Eagles",
+            "cityName": "Philadelphia",
+            "teamName": "Eagles",
+            "cityShort": "PHI",
+            "logoUrl": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/phi.png"
+          },
+          "gameTime": "Sunday, Sep 29, 2024 @ 12:00 PM CT",
+          "consensus": "",
+          "outcome": ""
+        },
+        {
+          "homeTeam": {
+            "fullName": "Carolina Panthers",
+            "cityName": "Carolina",
+            "teamName": "Panthers",
+            "cityShort": "CAR",
+            "logoUrl": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/car.png"
+          },
+          "awayTeam": {
+            "fullName": "Cincinnati Bengals",
+            "cityName": "Cincinnati",
+            "teamName": "Bengals",
+            "cityShort": "CIN",
+            "logoUrl": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/cin.png"
+          },
+          "gameTime": "Sunday, Sep 29, 2024 @ 12:00 PM CT",
+          "consensus": "",
+          "outcome": ""
+        },
+        {
+          "homeTeam": {
+            "fullName": "Houston Texans",
+            "cityName": "Houston",
+            "teamName": "Texans",
+            "cityShort": "HOU",
+            "logoUrl": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/hou.png"
+          },
+          "awayTeam": {
+            "fullName": "Jacksonville Jaguars",
+            "cityName": "Jacksonville",
+            "teamName": "Jaguars",
+            "cityShort": "JAX",
+            "logoUrl": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/jax.png"
+          },
+          "gameTime": "Sunday, Sep 29, 2024 @ 12:00 PM CT",
+          "consensus": "",
+          "outcome": ""
+        },
+        {
+          "homeTeam": {
+            "fullName": "Arizona Cardinals",
+            "cityName": "Arizona",
+            "teamName": "Cardinals",
+            "cityShort": "ARI",
+            "logoUrl": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/ari.png"
+          },
+          "awayTeam": {
+            "fullName": "Washington Commanders",
+            "cityName": "Washington",
+            "teamName": "Commanders",
+            "cityShort": "WSH",
+            "logoUrl": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/wsh.png"
+          },
+          "gameTime": "Sunday, Sep 29, 2024 @ 3:05 PM CT",
+          "consensus": "",
+          "outcome": ""
+        },
+        {
+          "homeTeam": {
+            "fullName": "San Francisco 49ers",
+            "cityName": "San Francisco",
+            "teamName": "49ers",
+            "cityShort": "SF",
+            "logoUrl": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/sf.png"
+          },
+          "awayTeam": {
+            "fullName": "New England Patriots",
+            "cityName": "New England",
+            "teamName": "Patriots",
+            "cityShort": "NE",
+            "logoUrl": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/ne.png"
+          },
+          "gameTime": "Sunday, Sep 29, 2024 @ 3:05 PM CT",
+          "consensus": "",
+          "outcome": ""
+        },
+        {
+          "homeTeam": {
+            "fullName": "Las Vegas Raiders",
+            "cityName": "Las Vegas",
+            "teamName": "Raiders",
+            "cityShort": "LV",
+            "logoUrl": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/lv.png"
+          },
+          "awayTeam": {
+            "fullName": "Cleveland Browns",
+            "cityName": "Cleveland",
+            "teamName": "Browns",
+            "cityShort": "CLE",
+            "logoUrl": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/cle.png"
+          },
+          "gameTime": "Sunday, Sep 29, 2024 @ 3:25 PM CT",
+          "consensus": "",
+          "outcome": ""
+        },
+        {
+          "homeTeam": {
+            "fullName": "Los Angeles Chargers",
+            "cityName": "Los Angeles",
+            "teamName": "Chargers",
+            "cityShort": "LAC",
+            "logoUrl": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/lac.png"
+          },
+          "awayTeam": {
+            "fullName": "Kansas City Chiefs",
+            "cityName": "Kansas City",
+            "teamName": "Chiefs",
+            "cityShort": "KC",
+            "logoUrl": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/kc.png"
+          },
+          "gameTime": "Sunday, Sep 29, 2024 @ 3:25 PM CT",
+          "consensus": "",
+          "outcome": ""
+        },
+        {
+          "homeTeam": {
+            "fullName": "Baltimore Ravens",
+            "cityName": "Baltimore",
+            "teamName": "Ravens",
+            "cityShort": "BAL",
+            "logoUrl": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/bal.png"
+          },
+          "awayTeam": {
+            "fullName": "Buffalo Bills",
+            "cityName": "Buffalo",
+            "teamName": "Bills",
+            "cityShort": "BUF",
+            "logoUrl": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/buf.png"
+          },
+          "gameTime": "Sunday, Sep 29, 2024 @ 7:20 PM CT",
+          "consensus": "",
+          "outcome": ""
+        },
+        {
+          "homeTeam": {
+            "fullName": "Miami Dolphins",
+            "cityName": "Miami",
+            "teamName": "Dolphins",
+            "cityShort": "MIA",
+            "logoUrl": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/mia.png"
+          },
+          "awayTeam": {
+            "fullName": "Tennessee Titans",
+            "cityName": "Tennessee",
+            "teamName": "Titans",
+            "cityShort": "TEN",
+            "logoUrl": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/ten.png"
+          },
+          "gameTime": "Monday, Sep 30, 2024 @ 6:30 PM CT",
+          "consensus": "",
+          "outcome": ""
+        },
+        {
+          "homeTeam": {
+            "fullName": "Detroit Lions",
+            "cityName": "Detroit",
+            "teamName": "Lions",
+            "cityShort": "DET",
+            "logoUrl": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/det.png"
+          },
+          "awayTeam": {
+            "fullName": "Seattle Seahawks",
+            "cityName": "Seattle",
+            "teamName": "Seahawks",
+            "cityShort": "SEA",
+            "logoUrl": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/sea.png"
+          },
+          "gameTime": "Monday, Sep 30, 2024 @ 7:15 PM CT",
+          "consensus": "",
+          "outcome": ""
+        }
+      ]
+    }
+  ]
+}
