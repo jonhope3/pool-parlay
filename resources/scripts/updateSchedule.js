@@ -102,6 +102,6 @@ async function updateSeasonData(year, week) {
 
 // Example usage
 const year = 2024; // You can change this to the desired year
-const week = 3;    // You can change this to the desired week number
+const week = 4;    // You can change this to the desired week number
 
 updateSeasonData(year, week);
