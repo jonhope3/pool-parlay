@@ -1,4 +1,4 @@
-const CACHE = "poolparlay-v5";
+const CACHE = "poolparlay-v6";
 
 self.addEventListener("install", () => {
   self.skipWaiting();
