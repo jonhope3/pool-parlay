@@ -1,16 +1,19 @@
 {
-  "type": "module",
+  "name": "pool-parlay",
   "private": true,
-  "dependencies": {
-    "@google-cloud/local-auth": "^3.0.1",
-    "axios": "^1.7.7",
-    "csv-parser": "^3.0.0",
-    "date-fns": "^3.6.0",
-    "date-fns-tz": "^3.1.3",
-    "googleapis": "^144.0.0",
-    "node-fetch": "^3.3.2"
+  "version": "2.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "snapshot": "node scripts/snapshot-nfl.mjs",
+    "build": "npm run snapshot && tsc --noEmit && vite build",
+    "preview": "vite preview"
   },
-  "engines": {
-    "node": ">=18"
+  "dependencies": {
+    "peerjs": "^1.5.5"
+  },
+  "devDependencies": {
+    "typescript": "~5.9.2",
+    "vite": "^7.1.5"
   }
 }

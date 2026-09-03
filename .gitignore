@@ -1,12 +1,13 @@
-# Include your project-specific ignores in this file
-# Read about how to use .gitignore: https://help.github.com/articles/ignoring-files
-# Useful .gitignore templates: https://github.com/github/gitignore
 node_modules
 dist
 .cache
 .idea
 *.csv
-*.json
-!package.json
-!package-lock.json
-!resources/season_data.json
+dexie-cloud.key
+dexie-cloud.json
+.DS_Store
+resources/.DS_Store
+resources/assets/.DS_Store
+resources/scripts/credentials.json
+resources/scripts/token.json
+resources/outputs/
